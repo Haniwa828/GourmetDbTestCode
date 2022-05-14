@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-227374989-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-227374989-1');
+    </script>-->
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>マレーシアグルメDB(仮)</title>
+
+    <!-- cssのインポート -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/test.css" />
+
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="shortcut icon" href="/photo/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/photo/icon.png" />
+    <link rel="apple-touch-icon" href="/photo/icon.png" />
+    <link rel="icon" href="/photo/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- ハンバーガーメニュー関連 -->
+    <div class="hamburger-menu">
+      <!-- 状態判別用チェックボックス -->
+      <input type="checkbox" id="menu-btn-check" />
+      <!-- ボタン -->
+      <label for="menu-btn-check" class="menu-btn"><span></span></label>
+
+      <!-- 中身 -->
+      <div class="menu-content">
+        <ul>
+          <!-- ホーム画面へのリンク -->
+          <li>
+            <a href="/index.html" style="font-size: large">ホーム</a>
+          </li>
+          <!-- お知らせ一覧へのリンク -->
+          <li>
+            <a href="/html/announce.html?announceId=-1" style="font-size: large"
+              >お知らせ</a
+            >
+          </li>
+          <!-- 店舗投稿用フォームへのリンク -->
+          <li>
+            <a
+              href="https://forms.gle/Zhvo9QcPjUVPpQyj6"
+              target="_blank"
+              style="font-size: large"
+              >店舗投稿</a
+            >
+          </li>
+          <!-- レビュー投稿用フォームへのリンク -->
+          <li>
+            <a
+              href="https://forms.gle/YUpxgStCMJSPURJbA"
+              target="_blank"
+              style="font-size: large"
+              >レビュー投稿</a
+            >
+          </li>
+          <!-- 意見等収集用フォームへのリンク -->
+          <li>
+            <a
+              href="https://forms.gle/tx1ZhYPLLyBAw6ybA"
+              target="_blank"
+              style="font-size: large"
+              >意見/修正依頼</a
+            >
+          </li>
+          <!-- ヘルプページへのリンク -->
+          <li>
+            <a href="/html/help.html" style="font-size: large">ヘルプ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- ヘッダー -->
+    <div
+      style="
+        font-size: large;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #bc002d;
+        text-align: center;
+      "
+    >
+      <!-- アイコンとタイトル -->
+      <img style="height: 50px" src="/photo/icon.png" style="width: 15vw" />
+      日本グルメDB(仮)
+    </div>
+
+    <!-- クレジット -->
+    <div style="margin: 10px">
+      <div>使用ライブラリ</div>
+      <div>jQuery:</div>
+      <div>
+        jQuery v3.4.1 | (c) JS Foundation and other contributors |
+        jquery.org/license
+      </div>
+      <div>&ensp;</div>
+      <div>Bootstrap:</div>
+      <div style="word-break: break-all">
+        Bootstrap v4.3.1 (https://getbootstrap.com/)<br />
+        Copyright 2011-2019 The Bootstrap Authors<br />
+        Copyright 2011-2019 Twitter, Inc.<br />
+        Licensed under MIT
+        (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+      </div>
+      <div>&ensp;</div>
+      <div>参考にさせて頂いたサイト様</div>
+      <a href="https://pengi-n.co.jp/blog/modalwindow/#i-8"
+        >モーダルウィンドウの作り方</a
+      ><br />
+      <a href="https://www.asobou.co.jp/blog/web/css-menu"
+        >ハンバーガーメニューの作り方</a
+      ><br />
+      <a href="https://kinocolog.com/css_star_rating/">レートの星の作り方</a
+      ><br />
+      <a href="https://qiita.com/kingpanda/items/8e60a64dc2454f6ae6b5"
+        >スプレッドシートのデータ取得の方法</a
+      >
+      <div>&ensp;</div>
+      <div>その他の素材、コードなどは全て自作です。</div>
+    </div>
+
+    
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS -->
+    <script type="text/javascript" src="/JavaScript/script.js"></script>
+    <script type="text/javascript" src="/JavaScript/tabs.js"></script>
+    <script type="text/javascript" src="/JavaScript/forDetail.js"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-227374989-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-227374989-1');
+    </script> -->
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>日本グルメDB(仮)</title>
+
+    <!-- cssのインポート -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/test.css" />
+
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="shortcut icon" href="/photo/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/photo/icon.png" />
+    <link rel="apple-touch-icon" href="/photo/icon.png" />
+    <link rel="icon" href="/photo/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body onload="announce()">
+    <!-- ハンバーガーメニュー関連 -->
+    <div class="hamburger-menu">
+      <!-- 状態判別用チェックボックス -->
+      <input type="checkbox" id="menu-btn-check" />
+      <!-- ボタン -->
+      <label for="menu-btn-check" class="menu-btn"><span></span></label>
+
+      <!-- 中身 -->
+      <div class="menu-content">
+        <!-- ホーム画面へのリンク -->
+        <ul>
+          <li>
+            <a href="/index.html" style="font-size: large">ホーム</a>
+          </li>
+          <!-- 店舗投稿用フォームへのリンク -->
+          <li>
+            <a
+              href="https://forms.gle/Zhvo9QcPjUVPpQyj6"
+              target="_blank"
+              style="font-size: large"
+              >店舗投稿</a
+            >
+          </li>
+          <!-- レビュー投稿用フォームへのリンク -->
+          <li>
+            <a
+              href="https://forms.gle/YUpxgStCMJSPURJbA"
+              target="_blank"
+              style="font-size: large"
+              >レビュー投稿</a
+            >
+          </li>
+          <!-- 意見等収集用フォームへのリンク -->
+          <li>
+            <a
+              href="https://forms.gle/tx1ZhYPLLyBAw6ybA"
+              target="_blank"
+              style="font-size: large"
+              >意見/修正依頼</a
+            >
+          </li>
+          <!-- ヘルプページへのリンク -->
+          <li>
+            <a href="/html/help.html" style="font-size: large">ヘルプ</a>
+          </li>
+          <!-- クレジットページへのリンク -->
+          <li>
+            <a href="/html/credit.html" style="font-size: large">クレジット</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- ヘッダー -->
+    <div
+      style="
+        font-size: large;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #bc002d;
+        text-align: center;
+      "
+    >
+      <!-- アイコンとタイトル -->
+      <img style="height: 50px" src="/photo/icon.png" style="width: 15vw" />
+      日本グルメDB(仮)
+    </div>
+
+
+    <!-- お知らせ一覧表示エリア -->
+    <div id="announceDisplay" style="margin: 10px 10px 10px 10px"></div>
+    <br />
+
+
+    <!-- 最新のお知らせ一覧表示エリア -->
+    <div
+      id="announceArea"
+      style="
+        margin: 10px 10px 10px 10px;
+        border: 1px solid;
+        border-color: #7f7f7f;
+      "
+    >
+      <div style="border: 1px solid; border-color: #898989">最新のお知らせ</div>
+    </div>
+
+    
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- スライドショー用cdn -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
+    <!-- JS -->
+    <script type="text/javascript" src="/JavaScript/script.js"></script>
+    <script type="text/javascript" src="/JavaScript/forDetail.js"></script>
+    <script type="text/javascript" src="/JavaScript/tabs.js"></script>
+  </body>
+</html>

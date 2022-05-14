@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-227374989-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-227374989-1');
+    </script> -->
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>マレーシアグルメDB(仮)</title>
+
+    <!-- cssのインポート -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/test.css" />
+
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="shortcut icon" href="/photo/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/photo/icon.png" />
+    <link rel="apple-touch-icon" href="/photo/icon.png" />
+    <link rel="icon" href="/photo/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body onload="shopsDetail()">
+    <!-- モーダルウィンドウ関連 -->
+    <!-- オーバーレイ -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- レビュー投稿用モーダルウィンドウ -->
+    <div
+      class="modal-window"
+      data-id="modal1"
+      id="modal1"
+      style="overflow: auto"
+    >
+      <!-- 中身 -->
+      <p>目的の店名のコピーが推奨されます</p>
+      <!-- 検索ボックス -->
+      <input id="searchShop" type="text" />
+      <!-- 検索ボタン -->
+      <button onclick="searchShop('searchShop')">検索</button>
+      <br /><br />
+      <!-- 検索結果表示エリア -->
+      <div id="forReviewLink1" style="height: 55%; overflow: auto"></div>
+      <br />
+      <!-- 戻るボタン -->
+      <button class="js-close button-close button">戻る</button>
+      <!-- レビュー投稿用フォームへのリンク -->
+      <a
+        class="button"
+        href="https://forms.gle/YUpxgStCMJSPURJbA"
+        target="_blank"
+        >進む</a
+      >
+    </div>
+
+    <!-- 店舗投稿用モーダルウィンドウ -->
+    <div class="modal-window" data-id="modal2">
+      <p>既出か確認して下さい</p>
+      <!-- 検索ボックス -->
+      <input id="searchShops" type="text" />
+      <!-- 検索ボタン -->
+      <button onclick="searchShop('searchShops')">検索</button>
+      <br /><br />
+      <!-- 検索結果表示エリア -->
+      <div id="forReviewLink2" style="height: 55%; overflow: auto"></div>
+      <br />
+      <!-- 戻るボタン -->
+      <button class="js-close button-close button">戻る</button>
+      <!-- 店舗投稿用フォームへのリンク -->
+      <a
+        class="button"
+        href="https://forms.gle/3vwKDFyDjBiU6ypg9"
+        target="_blank"
+        >進む</a
+      >
+    </div>
+
+
+    <!-- ハンバーガーメニュー -->
+    <div class="hamburger-menu">
+      <!-- 状態判別用チェックボックス -->
+      <input type="checkbox" id="menu-btn-check" />
+      <!-- ボタン -->
+      <label for="menu-btn-check" class="menu-btn"><span></span></label>
+
+      <!-- 中身 -->
+      <div class="menu-content">
+        <ul>
+          <!-- ホーム画面へのリンク -->
+          <li>
+            <a href="/index.html" style="font-size: large">ホーム</a>
+          </li>
+          <!-- お知らせ一覧へのリンク -->
+          <li>
+            <a href="/html/announce.html?announceId=-1" style="font-size: large"
+              >お知らせ</a
+            >
+          </li>
+          <!-- 店舗投稿用モーダルウィンドウの呼び出し -->
+          <li>
+            <div
+              class="js-open button-open"
+              data-id="2"
+              style="font-size: large"
+            >
+              店舗投稿
+            </div>
+          </li>
+          <!-- レビュー投稿用モーダルウィンドウの呼び出し -->
+          <li>
+            <div
+              class="js-open button-open"
+              data-id="1"
+              style="font-size: large"
+            >
+              レビュー投稿
+            </div>
+          </li>
+          <!-- 意見等収集用フォームへのリンク -->
+          <li>
+            <a
+              href="https://forms.gle/tx1ZhYPLLyBAw6ybA"
+              target="_blank"
+              style="font-size: large"
+              >意見/修正依頼</a
+            >
+          </li>
+          <!-- ヘルプページへのリンク -->
+          <li>
+            <a href="/html/help.html" style="font-size: large">ヘルプ</a>
+          </li>
+          <!-- クレジットページへのリンク -->
+          <li>
+            <a href="/html/credit.html" style="font-size: large">クレジット</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- ヘッダー -->
+    <div
+      style="
+        font-size: large;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #bc002d;
+        text-align: center;
+      "
+    >
+      <!-- タイトルとアイコン -->
+      <img style="height: 50px" src="/photo/icon.png" style="width: 15vw" />
+      日本グルメDB(仮)
+    </div>
+
+
+    <!-- 店舗情報表示エリア -->
+    <div id="shop"></div>
+
+    
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS -->
+    <script type="text/javascript" src="/JavaScript/script.js"></script>
+    <script type="text/javascript" src="/JavaScript/tabs.js"></script>
+    <script type="text/javascript" src="/JavaScript/forDetail.js"></script>
+  </body>
+</html>
